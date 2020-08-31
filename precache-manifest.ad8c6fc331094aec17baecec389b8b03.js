@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c25edb61bd5af329192e1de317bdc842",
+    "revision": "c1cb2fd7f875bc5e7a1859f01f50ff15",
     "url": "/movie-quotes-quiz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/movie-quotes-quiz/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "c8eb7e35c24eaeca2e97",
+    "revision": "2eb32b1559c4926e0522",
     "url": "/movie-quotes-quiz/static/css/main.78c8a021.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/movie-quotes-quiz/static/js/2.674ecb63.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8eb7e35c24eaeca2e97",
-    "url": "/movie-quotes-quiz/static/js/main.a8016fc0.chunk.js"
+    "revision": "2eb32b1559c4926e0522",
+    "url": "/movie-quotes-quiz/static/js/main.b9536742.chunk.js"
   },
   {
     "revision": "39c26d6305ceca88f494",
