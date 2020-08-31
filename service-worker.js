@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/movie-quotes-quiz/precache-manifest.657d53ddd6b1e62d6cca1c4062738876.js"
+  "/movie-quotes-quiz/precache-manifest.03c9b0ebbaef006409d6ae61d1bf2f45.js"
 );
 
 self.addEventListener('message', (event) => {
