@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movie-quotes-quiz/static/css/main.78c8a021.chunk.css",
-    "main.js": "/movie-quotes-quiz/static/js/main.b9536742.chunk.js",
-    "main.js.map": "/movie-quotes-quiz/static/js/main.b9536742.chunk.js.map",
+    "main.js": "/movie-quotes-quiz/static/js/main.f5fb8556.chunk.js",
+    "main.js.map": "/movie-quotes-quiz/static/js/main.f5fb8556.chunk.js.map",
     "runtime-main.js": "/movie-quotes-quiz/static/js/runtime-main.fb173c1c.js",
     "runtime-main.js.map": "/movie-quotes-quiz/static/js/runtime-main.fb173c1c.js.map",
     "static/css/2.11829350.chunk.css": "/movie-quotes-quiz/static/css/2.11829350.chunk.css",
     "static/js/2.674ecb63.chunk.js": "/movie-quotes-quiz/static/js/2.674ecb63.chunk.js",
     "static/js/2.674ecb63.chunk.js.map": "/movie-quotes-quiz/static/js/2.674ecb63.chunk.js.map",
     "index.html": "/movie-quotes-quiz/index.html",
-    "precache-manifest.ad8c6fc331094aec17baecec389b8b03.js": "/movie-quotes-quiz/precache-manifest.ad8c6fc331094aec17baecec389b8b03.js",
+    "precache-manifest.e4d7bf7a660e39d2121e6cbd8922f79e.js": "/movie-quotes-quiz/precache-manifest.e4d7bf7a660e39d2121e6cbd8922f79e.js",
     "service-worker.js": "/movie-quotes-quiz/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/movie-quotes-quiz/static/css/2.11829350.chunk.css.map",
     "static/css/main.78c8a021.chunk.css.map": "/movie-quotes-quiz/static/css/main.78c8a021.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.674ecb63.chunk.js",
     "static/css/main.78c8a021.chunk.css",
-    "static/js/main.b9536742.chunk.js"
+    "static/js/main.f5fb8556.chunk.js"
   ]
 }
