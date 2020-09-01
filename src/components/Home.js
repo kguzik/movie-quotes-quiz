@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
-import {Container, Row} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap';
 
 function Home(){
     return (
