@@ -98,7 +98,7 @@ class Quiz extends React.Component {
         });
     }
 
-    handleQuitButtonClick = (e) => {
+    handleQuitButtonClick = () => {
         this.playButtonSound();
         this.alertQuit();
     } 
@@ -124,7 +124,6 @@ class Quiz extends React.Component {
 
     wrongAnswer = () => {
         M.toast({html: 'Wrong :(', classes: 'btn-basic btn-small btn-red', displayLength: 1500});
-        navigator.vibrate(1000);
         this.setState(prevState => ({
             wrongAnswers: prevState.wrongAnswers + 1,
             numberOfAnsweredQuestion: prevState.numberOfAnsweredQuestion + 1,
