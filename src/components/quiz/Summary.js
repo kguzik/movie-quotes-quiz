@@ -39,10 +39,10 @@ class Summary extends React.Component {
                         <p className="summary-info text-center">Number of questions: <strong>{this.state.numberOfQuestions}</strong></p>
                     </Row>
                     <Row className="mx-2 mx-md-5 mb-5 d-flex">
-                        <Col xs={12} md={6} className="mb-5 justify-content-center d-flex">
+                        <Col xs={12} md={6} className="mb-3 mb-md-5 justify-content-center d-flex">
                             <Link to="/" className="btn-basic m-auto px-5">Back to home</Link>
                         </Col>
-                        <Col xs={12} md={6} className="mb-5 justify-content-center d-flex">
+                        <Col xs={12} md={6} className="mb-3 mb-md-5 justify-content-center d-flex">
                             <Link to="quiz" className="btn-basic m-auto px-5">Play again!</Link>
                         </Col>
                     </Row>
