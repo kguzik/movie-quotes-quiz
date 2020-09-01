@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "content": "With great power comes great responsibility",
+        "content": "With great power comes great responsibility.",
         "movie": {
             "title": "Spider-Man"
         },
@@ -78,7 +78,7 @@
     },
     { 
         "id": 8,
-        "content": "I'll see you in another life, when we are both cats",
+        "content": "I'll see you in another life, when we are both cats.",
         "movie": {
             "title": "Vanilla Sky"
         },
@@ -89,7 +89,7 @@
     },
     { 
         "id": 9,
-        "content": "A Kansas City Shuffle is when everybody looks right, you go left",
+        "content": "A Kansas City Shuffle is when everybody looks right, you go left.",
         "movie": {
             "title": "Lucky Number Slevin"
         },
@@ -111,7 +111,7 @@
     },
     { 
         "id": 11,
-        "content": "This is a story of boy meets girl, but you should know upfront, this is not a love story. ",
+        "content": "This is a story of boy meets girl, but you should know upfront, this is not a love story.",
         "movie": {
             "title": "500 Days of Summer"
         },
@@ -190,7 +190,7 @@
         "id": 18,
         "content": "Help me, Obi-Wan Kenobi. You're my only hope.",
         "movie": {
-            "title": " Stars Wars Episode IV: A New Hope"
+            "title": "Stars Wars Episode IV: A New Hope"
         },
         "firstAnswer": "Stars Wars Episode VIII: The Last Jedi",
         "secondAnswer": "Stars Wars Episode IV: A New Hope",
@@ -210,7 +210,7 @@
     },
     { 
         "id": 20,
-        "content": " I think this is the beginning of a beautiful friendship",
+        "content": "I think this is the beginning of a beautiful friendship.",
         "movie": {
             "title": "Casablanca"
         },
