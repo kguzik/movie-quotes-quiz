@@ -29,14 +29,14 @@ function Footer() {
 function App() {
   return (
     <>
-    <Header/>
-    <Router>
-      <Route path="/" exact component={Home}/>
-      <Route path="/play/instruction" exact component={QuizInstructions}/>
-      <Route path="/play/quiz" exact component={Quiz}/>
-      <Route path="/play/summary" exact component={Summary}/>
-    </Router>
-    <Footer/>
+      <Header/>
+      <Router basename='/movie-quotes-quiz'>
+        <Route path="/" exact component={Home}/>
+        <Route path="/play/instruction" exact component={QuizInstructions}/>
+        <Route path="/play/quiz" exact component={Quiz}/>
+        <Route path="/play/summary" exact component={Summary}/>
+      </Router>
+      <Footer/>
     </>
   )
 }
