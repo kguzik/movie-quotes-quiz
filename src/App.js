@@ -6,7 +6,7 @@ import QuizInstructions from './components/quiz/QuizInstructions'
 import Quiz from './components/quiz/Quiz';
 import Summary from './components/quiz/Summary';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import QuestionsHook from './QuestionsHook';
+import firebase from './Config';
 
 function Header(){
   return (
@@ -27,15 +27,21 @@ function Footer() {
   )
 }
 
+function getQuestions() {
+  const ref = firebase.firestore().collection('quotes');
+  return ref.get().then(item => {
+    return item.docs.map(doc => doc.data());
+  });
+}
+
 function App() {
-  const questions = QuestionsHook();
   return (
     <>
       <Header/>
       <Router basename='/movie-quotes-quiz'>
         <Route path="/" exact component={Home}/>
         <Route path="/play/instruction" exact component={QuizInstructions}/>
-        <Route path="/play/quiz" exact render={(props) => <Quiz questions={questions} {...props} />}/>
+        <Route path="/play/quiz" exact render={(props) => <Quiz getQuestions={getQuestions} {...props} />}/>
         <Route path="/play/summary" exact component={Summary}/>
       </Router>
       <Footer/>
