@@ -6,13 +6,14 @@ import QuizInstructions from './components/quiz/QuizInstructions'
 import Quiz from './components/quiz/Quiz';
 import Summary from './components/quiz/Summary';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import QuestionsHook from './QuestionsHook';
 
 function Header(){
   return (
     <div>
       <div className="logo">
         <Icon fontSize="large">movie</Icon>
-        <strong>Movie Quotes Quiz</strong>
+        <strong>Movie Quotes Quiz</strong>  
       </div>
     </div>
   )
@@ -27,13 +28,14 @@ function Footer() {
 }
 
 function App() {
+  const questions = QuestionsHook();
   return (
     <>
       <Header/>
       <Router basename='/movie-quotes-quiz'>
         <Route path="/" exact component={Home}/>
         <Route path="/play/instruction" exact component={QuizInstructions}/>
-        <Route path="/play/quiz" exact component={Quiz}/>
+        <Route path="/play/quiz" exact render={(props) => <Quiz questions={questions} {...props} />}/>
         <Route path="/play/summary" exact component={Summary}/>
       </Router>
       <Footer/>
