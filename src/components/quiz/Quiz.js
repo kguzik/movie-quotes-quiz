@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Icon from '@material-ui/core/Icon';
-import questions from '../../questions.json';
 import M from 'materialize-css';
 import correctNotification from '../../assets/audio/correct-answer.mp3';
 import wrongNotification from '../../assets/audio/wrong-answer.mp3';
@@ -14,7 +13,7 @@ class Quiz extends React.Component {
     constructor(){
         super();
         this.state = { 
-            questions: questions,
+            questions: [],
             currentQuestion: {},
             nextQuestion: {},
             previousQuestion: {},
@@ -40,16 +39,15 @@ class Quiz extends React.Component {
             nextQuestion,
             previousQuestion,
             numberOfQuestions: questions.length,
-            answer: currentQuestion && currentQuestion.movie ? currentQuestion.movie.title : null,
+            answer: currentQuestion && currentQuestion.title
         });
     }
 
     componentDidMount(){
-        this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
-            this.startTimer();
-        setTimeout(() => {
-            console.log(this.props.questions);
-        }, 1000)
+        this.props.getQuestions()
+            .then((data) => this.setState({questions: data}))
+            .then(() => this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion));
+        this.startTimer();
     }
 
     componentWillUnmount(){
