@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 import {Container, Row, Col} from 'react-bootstrap'
 
 class Quiz extends React.Component {
-    
+
     constructor(){
         super();
         this.state = { 
@@ -46,7 +46,10 @@ class Quiz extends React.Component {
 
     componentDidMount(){
         this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
-        this.startTimer();
+            this.startTimer();
+        setTimeout(() => {
+            console.log(this.props.questions);
+        }, 1000)
     }
 
     componentWillUnmount(){
