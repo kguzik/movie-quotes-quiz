@@ -22,7 +22,7 @@ function Header(){
 function Footer() {
   return (
     <div id="footer">
-      <p>Desing & created by Karolina Guzik</p>
+      <p>Designed & created by Karolina Guzik</p>
     </div>
   )
 }
