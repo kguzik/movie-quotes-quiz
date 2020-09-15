@@ -6,7 +6,9 @@ import correctNotification from '../../assets/audio/correct-answer.mp3';
 import wrongNotification from '../../assets/audio/wrong-answer.mp3';
 import buttonSound from '../../assets/audio/button-sound.mp3';
 import Swal from 'sweetalert2';
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
+import { BarLoader } from 'react-spinners';
+import { Fade } from '@material-ui/core';
 
 class Quiz extends React.Component {
 
@@ -23,7 +25,8 @@ class Quiz extends React.Component {
             currentQuestionIndex: 0,
             correctAnswers: 0,
             wrongAnswers: 0,
-            time: {}
+            time: {},
+            loading: true
         }
         this.interval = null;
     }
@@ -39,11 +42,13 @@ class Quiz extends React.Component {
             nextQuestion,
             previousQuestion,
             numberOfQuestions: questions.length,
-            answer: currentQuestion && currentQuestion.title
+            answer: currentQuestion && currentQuestion.title,
+            loading: false
         });
     }
 
     componentDidMount(){
+
         this.props.getQuestions()
             .then((data) => this.setState({questions: data}))
             .then(() => this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion));
@@ -183,43 +188,53 @@ class Quiz extends React.Component {
     }
 
     render() {
-        const {currentQuestion, numberOfQuestions, currentQuestionIndex, time} = this.state; 
-        return (
-            <div id="quiz">
-                <Helmet><title>Movie Quotes Quiz - Quiz</title></Helmet>
-                <audio id="correct-sound" src={correctNotification}></audio>
-                <audio id="wrong-sound" src={wrongNotification}></audio>
-                <audio id="button-sound" src={buttonSound}></audio>
-                <Container fluid>
-                    <Row className="mx-5">
-                        <Col>
-                            <p>{currentQuestionIndex + 1}/{numberOfQuestions}</p>
-                        </Col>
-                        <Col>
-                            <p className="d-flex justify-content-end align-items-center"><Icon fontSize="small" className="mr-2">timer</Icon>{time.minutes}:{time.seconds}</p>
-                        </Col>
-                    </Row>
-                    <h1 className="text-center mt-1 mt-md-4 mx-2 mx-md-5 font-weight-light">{currentQuestion.content}</h1>
-                    <Row>
-                        <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                            <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.firstAnswer}</button>
-                        </Col>
-                        <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                            <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.secondAnswer}</button>
-                        </Col>
-                        <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                            <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.thirdAnswer}</button>
-                        </Col>
-                        <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                            <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.fourthAnswer}</button>
-                        </Col>
-                    </Row>
-                    <Row className="ml-4 my-3">
-                        <button className="btn-basic btn-red btn-small" id="quit-button" onClick={this.handleQuitButtonClick}>Quit</button>
-                    </Row>
-                </Container>
-            </div>
-        )
+        const {currentQuestion, numberOfQuestions, currentQuestionIndex, time, loading} = this.state; 
+        if(loading) {
+            return (
+                <Row className="d-flex align-items-center justify-content-center h-100">
+                    <BarLoader size={120} color="#1db954" loading={loading}/>
+                </Row>
+            )
+        } else {
+            return (
+                <Fade in={true}>
+                    <div id="quiz">
+                        <Helmet><title>Movie Quotes Quiz - Quiz</title></Helmet>
+                        <audio id="correct-sound" src={correctNotification}></audio>
+                        <audio id="wrong-sound" src={wrongNotification}></audio>
+                        <audio id="button-sound" src={buttonSound}></audio>
+                        <Container fluid>
+                            <Row className="mx-5">
+                                <Col>
+                                    <p>{currentQuestionIndex + 1}/{numberOfQuestions}</p>
+                                </Col>
+                                <Col>
+                                    <p className="d-flex justify-content-end align-items-center"><Icon fontSize="small" className="mr-2">timer</Icon>{time.minutes}:{time.seconds}</p>
+                                </Col>
+                            </Row>
+                            <h1 className="text-center mt-1 mt-md-4 mx-2 mx-md-5 font-weight-light">{currentQuestion.content}</h1>
+                            <Row>
+                                <Col xs={12} md={6} className="d-flex justify-content-center px-5">
+                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.firstAnswer}</button>
+                                </Col>
+                                <Col xs={12} md={6} className="d-flex justify-content-center px-5">
+                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.secondAnswer}</button>
+                                </Col>
+                                <Col xs={12} md={6} className="d-flex justify-content-center px-5">
+                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.thirdAnswer}</button>
+                                </Col>
+                                <Col xs={12} md={6} className="d-flex justify-content-center px-5">
+                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.fourthAnswer}</button>
+                                </Col>
+                            </Row>
+                            <Row className="ml-4 my-3">
+                                <button className="btn-basic btn-red btn-small" id="quit-button" onClick={this.handleQuitButtonClick}>Quit</button>
+                            </Row>
+                        </Container>
+                    </div>
+                </Fade>
+            )
+        }
     }
 }
 
