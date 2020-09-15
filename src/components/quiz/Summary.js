@@ -26,7 +26,6 @@ class Summary extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div id="summary">
                 <Helmet><title>Movie Quotes Quiz - Summary</title></Helmet>
