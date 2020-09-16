@@ -17,16 +17,6 @@ class Summary extends React.Component {
         }
     }
 
-//     getAnswers = () => {
-//         this.props.getQuestions().then((data) => {
-//             return data;
-//         });
-//     }
-//     this.props.getQuestions()
-//     .then((data) => this.setState({questions: data}))
-//     .then(() => this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion));
-// this.startTimer();
-
     componentDidMount() {
         const { state } = this.props.location;
         console.log(this.props.location);
