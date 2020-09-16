@@ -48,7 +48,6 @@ class Quiz extends React.Component {
     }
 
     componentDidMount(){
-
         this.props.getQuestions()
             .then((data) => this.setState({questions: data}))
             .then(() => this.displayQuestions(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion));
@@ -180,7 +179,8 @@ class Quiz extends React.Component {
             numberOfQuestions: this.state.numberOfQuestions,
             numberOfAnsweredQuestion: this.state.numberOfAnsweredQuestion,
             correctAnswer: this.state.correctAnswers,
-            wrongAnswer: this.state.wrongAnswers
+            wrongAnswer: this.state.wrongAnswers,
+            questions: this.state.questions
         }
         setTimeout(() => {
             this.props.history.push('/play/summary', playerStats);
