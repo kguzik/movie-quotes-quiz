@@ -42,7 +42,7 @@ function App() {
         <Route path="/" exact component={Home}/>
         <Route path="/play/instruction" exact component={QuizInstructions}/>
         <Route path="/play/quiz" exact render={(props) => <Quiz getQuestions={getQuestions} {...props} />}/>
-        <Route path="/play/summary" exact component={Summary}/>
+        <Route path="/play/summary" exact render={(props) => <Summary getQuestions={getQuestions} {...props} />}/>
       </Router>
       <Footer/>
     </>
