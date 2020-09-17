@@ -17,7 +17,11 @@ function Answers(props) {
             </Modal.Header>
             <Modal.Body>
                 <ul>
-                    {props.questions.map(question => <li key={question.id}>{question.content} - <strong>{question.title}</strong></li>)}
+                    {props.questions.map(question => 
+                        <li className={question.isCorrect ? 'correct-answer' : 'wrong-answer'} key={question.id}>
+                            <a target="_blank" href={question.link}>{question.content}</a> - <strong>{question.title}</strong>
+                        </li>
+                    )}
                 </ul>
             </Modal.Body>
             </Modal>
