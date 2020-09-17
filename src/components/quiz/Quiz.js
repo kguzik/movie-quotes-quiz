@@ -114,6 +114,7 @@ class Quiz extends React.Component {
 
     correctAnswer = () => {
         M.toast({html: 'Correct!', classes: 'btn-basic btn-small', displayLength: 1500});
+        this.state.questions[this.state.currentQuestionIndex].isCorrect = true;
         this.setState(prevState => ({
             correctAnswers: prevState.correctAnswers + 1,
             numberOfAnsweredQuestion: prevState.numberOfAnsweredQuestion + 1,
@@ -129,6 +130,7 @@ class Quiz extends React.Component {
 
     wrongAnswer = () => {
         M.toast({html: 'Wrong :(', classes: 'btn-basic btn-small btn-red', displayLength: 1500});
+        this.state.questions[this.state.currentQuestionIndex].isCorrect = false;
         this.setState(prevState => ({
             wrongAnswers: prevState.wrongAnswers + 1,
             numberOfAnsweredQuestion: prevState.numberOfAnsweredQuestion + 1,
