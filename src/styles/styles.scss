@@ -165,7 +165,37 @@ body {
             list-style: none;
             li {
                 margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
             }
+        }
+        a {
+            color: black;
+            &:hover {
+                text-decoration: none;
+                color: #061a33;
+            }
+        }
+    }
+
+    .wrong-answer, .correct-answer {
+        &::before {
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    .wrong-answer, .correct-answer {
+        &::before {
+            content: '\2717';
+            color: red;
+        }
+    }
+
+    .correct-answer {
+        &::before {
+            content: '\2713';
+            color: green;
         }
     }
 }
