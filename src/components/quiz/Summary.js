@@ -19,7 +19,6 @@ class Summary extends React.Component {
 
     componentDidMount() {
         const { state } = this.props.location;
-        console.log(this.props.location);
         this.setState({
             numberOfQuestions: state.numberOfQuestions,
             numberOfAnsweredQuestion: state.numberOfAnsweredQuestion,
