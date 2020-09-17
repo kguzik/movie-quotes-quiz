@@ -8,10 +8,10 @@ function Answers(props) {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <p onClick={handleShow} className="text-center show-answers">
                 {props.title}
-            </Button>
-            <Modal show={show} onHide={handleClose}>
+            </p>
+            <Modal show={show} onHide={handleClose} scrollable={true} className="modal-answers">
             <Modal.Header closeButton>
                 <Modal.Title>Answers</Modal.Title>
             </Modal.Header>
