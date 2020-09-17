@@ -42,7 +42,7 @@ class Summary extends React.Component {
                         <p className="summary-info text-center">Wrong answers: <strong>{this.state.wrongAnswer}</strong></p>
                         <p className="summary-info text-center">Number of answered questions: <strong>{this.state.numberOfAnsweredQuestion}</strong></p>
                         <p className="summary-info text-center">Number of questions: <strong>{this.state.numberOfQuestions}</strong></p>
-                        <Answers title="Zobacz poprawne odpowiedzi" questions={questions}></Answers>
+                        <Answers title="Show answers" questions={questions}></Answers>
                     </Row>
                     <Row className="mx-2 mx-md-5 mb-5 d-flex">
                         <Col xs={12} md={6} className="mb-3 mb-md-5 justify-content-center d-flex">
