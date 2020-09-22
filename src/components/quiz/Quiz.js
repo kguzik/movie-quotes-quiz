@@ -148,7 +148,7 @@ class Quiz extends React.Component {
     }
 
     startTimer = () => {
-        const countDownTime = Date.now() + 180000;
+        const countDownTime = Date.now() + 240000;
         this.interval = setInterval(() => {
             const now = new Date();
             const distance = countDownTime - now;
@@ -217,16 +217,16 @@ class Quiz extends React.Component {
                             <h1 className="text-center mt-1 mt-md-4 mx-2 mx-md-5 font-weight-light">{currentQuestion.content}</h1>
                             <Row>
                                 <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.firstAnswer}</button>
+                                    <button onClick={this.handleClick} className="btn-basic w-100" key={currentQuestionIndex}>{currentQuestion.firstAnswer}</button>
                                 </Col>
                                 <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.secondAnswer}</button>
+                                    <button onClick={this.handleClick} className="btn-basic w-100" key={currentQuestionIndex}>{currentQuestion.secondAnswer}</button>
                                 </Col>
                                 <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.thirdAnswer}</button>
+                                    <button onClick={this.handleClick} className="btn-basic w-100" key={currentQuestionIndex}>{currentQuestion.thirdAnswer}</button>
                                 </Col>
                                 <Col xs={12} md={6} className="d-flex justify-content-center px-5">
-                                    <button onClick={this.handleClick} className="btn-basic w-100">{currentQuestion.fourthAnswer}</button>
+                                    <button onClick={this.handleClick} className="btn-basic w-100" key={currentQuestionIndex}>{currentQuestion.fourthAnswer}</button>
                                 </Col>
                             </Row>
                             <Row className="ml-4 my-3">
