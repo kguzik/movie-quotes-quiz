@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/movie-quotes-quiz/static/css/main.d64fcce8.chunk.css",
-    "main.js": "/movie-quotes-quiz/static/js/main.32364617.chunk.js",
-    "main.js.map": "/movie-quotes-quiz/static/js/main.32364617.chunk.js.map",
+    "main.css": "/movie-quotes-quiz/static/css/main.6e021ee0.chunk.css",
+    "main.js": "/movie-quotes-quiz/static/js/main.c0ecf67a.chunk.js",
+    "main.js.map": "/movie-quotes-quiz/static/js/main.c0ecf67a.chunk.js.map",
     "runtime-main.js": "/movie-quotes-quiz/static/js/runtime-main.fb173c1c.js",
     "runtime-main.js.map": "/movie-quotes-quiz/static/js/runtime-main.fb173c1c.js.map",
     "static/css/2.11829350.chunk.css": "/movie-quotes-quiz/static/css/2.11829350.chunk.css",
-    "static/js/2.bc5ff0f8.chunk.js": "/movie-quotes-quiz/static/js/2.bc5ff0f8.chunk.js",
-    "static/js/2.bc5ff0f8.chunk.js.map": "/movie-quotes-quiz/static/js/2.bc5ff0f8.chunk.js.map",
+    "static/js/2.dd34650d.chunk.js": "/movie-quotes-quiz/static/js/2.dd34650d.chunk.js",
+    "static/js/2.dd34650d.chunk.js.map": "/movie-quotes-quiz/static/js/2.dd34650d.chunk.js.map",
     "index.html": "/movie-quotes-quiz/index.html",
-    "precache-manifest.35cfa2ccab3fd20d4c20e89c4b5cd7f4.js": "/movie-quotes-quiz/precache-manifest.35cfa2ccab3fd20d4c20e89c4b5cd7f4.js",
+    "precache-manifest.3c8ffcda1a96cb74bf8ac4f538cd50b7.js": "/movie-quotes-quiz/precache-manifest.3c8ffcda1a96cb74bf8ac4f538cd50b7.js",
     "service-worker.js": "/movie-quotes-quiz/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/movie-quotes-quiz/static/css/2.11829350.chunk.css.map",
-    "static/css/main.d64fcce8.chunk.css.map": "/movie-quotes-quiz/static/css/main.d64fcce8.chunk.css.map",
-    "static/js/2.bc5ff0f8.chunk.js.LICENSE.txt": "/movie-quotes-quiz/static/js/2.bc5ff0f8.chunk.js.LICENSE.txt",
+    "static/css/main.6e021ee0.chunk.css.map": "/movie-quotes-quiz/static/css/main.6e021ee0.chunk.css.map",
+    "static/js/2.dd34650d.chunk.js.LICENSE.txt": "/movie-quotes-quiz/static/js/2.dd34650d.chunk.js.LICENSE.txt",
     "static/media/button-sound.mp3": "/movie-quotes-quiz/static/media/button-sound.dd7fb344.mp3",
     "static/media/correct-answer.mp3": "/movie-quotes-quiz/static/media/correct-answer.2b87b416.mp3",
     "static/media/wrong-answer.mp3": "/movie-quotes-quiz/static/media/wrong-answer.3555354b.mp3"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.fb173c1c.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.bc5ff0f8.chunk.js",
-    "static/css/main.d64fcce8.chunk.css",
-    "static/js/main.32364617.chunk.js"
+    "static/js/2.dd34650d.chunk.js",
+    "static/css/main.6e021ee0.chunk.css",
+    "static/js/main.c0ecf67a.chunk.js"
   ]
 }
